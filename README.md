@@ -4,10 +4,10 @@ If you're reading this, you're likely a candidate for a frontend job at Teachabl
 
 The application, once completed, should meet the following criteria:
 
-1. It have a search box that lets users search for Ruby Gems.
+1. It will have a search box that lets users search for Ruby Gems.
 2. It should display the results of the search in a list.
 3. Each Gem should have a button that lets users "save" and "unsave" Gems.
-4. It should have a way to view saved Gems, even after the browser window is refreshed (localStorage is a fine for this).
+4. It should have a way to view saved Gems, even after the browser window is refreshed (localStorage is fine for this).
 
 Here's a few things we'll look for in our evaluation.
 
@@ -42,7 +42,7 @@ We added a CSS file as an example, feel free to delete that.
 
 ### Step 5: Network requests
 
-You may have noticed the server.js file at the root of this application, that's there to solve cross-origin issues when making network requests. The server automatically starts up when running "npm run dev" or "npm run start".
+You may have noticed the server.js file at the root of this application, that's there to solve cross-origin issues when making network requests. The server automatically starts up when running `npm run dev` or `npm run start`.
 
 To see a sample request in action, run the following in your command line.
 

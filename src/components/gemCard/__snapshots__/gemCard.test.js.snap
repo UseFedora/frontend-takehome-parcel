@@ -1,0 +1,542 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GemCard should render correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <GemCard
+    authors=""
+    documentation_uri=""
+    downloads={0}
+    gem_uri=""
+    homepage_uri=""
+    info="Does stuff"
+    isSaved={false}
+    licenses={Array []}
+    name="Railties"
+    onClickSave={[Function]}
+    project_uri=""
+    version="1.0.1"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className=", saveIconContainer"
+          onClick={[Function]}
+        >
+          <FaRegGem
+            className=" "
+          />
+        </div>,
+        <div>
+          <div>
+            <div>
+              <span>
+                Railties
+              </span>
+              <span>
+                  (v. 
+                1.0.1
+                )
+              </span>
+            </div>
+            <div>
+              0
+               
+              <span>
+                downloads
+              </span>
+            </div>
+          </div>
+          <div>
+            Does stuff
+          </div>
+        </div>,
+      ],
+      "className": undefined,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <FaRegGem
+            className=" "
+          />,
+          "className": ", saveIconContainer",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "className": " ",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div>
+              <div>
+                <span>
+                  Railties
+                </span>
+                <span>
+                    (v. 
+                  1.0.1
+                  )
+                </span>
+              </div>
+              <div>
+                0
+                 
+                <span>
+                  downloads
+                </span>
+              </div>
+            </div>,
+            <div>
+              Does stuff
+            </div>,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div>
+                  <span>
+                    Railties
+                  </span>
+                  <span>
+                      (v. 
+                    1.0.1
+                    )
+                  </span>
+                </div>,
+                <div>
+                  0
+                   
+                  <span>
+                    downloads
+                  </span>
+                </div>,
+              ],
+              "className": undefined,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <span>
+                      Railties
+                    </span>,
+                    <span>
+                        (v. 
+                      1.0.1
+                      )
+                    </span>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Railties",
+                      "className": undefined,
+                    },
+                    "ref": null,
+                    "rendered": "Railties",
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "  (v. ",
+                        "1.0.1",
+                        ")",
+                      ],
+                      "className": undefined,
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "  (v. ",
+                      "1.0.1",
+                      ")",
+                    ],
+                    "type": "span",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "0",
+                    " ",
+                    <span>
+                      downloads
+                    </span>,
+                  ],
+                  "className": undefined,
+                },
+                "ref": null,
+                "rendered": Array [
+                  "0",
+                  " ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "downloads",
+                      "className": undefined,
+                    },
+                    "ref": null,
+                    "rendered": "downloads",
+                    "type": "span",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Does stuff",
+              "className": undefined,
+            },
+            "ref": null,
+            "rendered": "Does stuff",
+            "type": "div",
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className=", saveIconContainer"
+            onClick={[Function]}
+          >
+            <FaRegGem
+              className=" "
+            />
+          </div>,
+          <div>
+            <div>
+              <div>
+                <span>
+                  Railties
+                </span>
+                <span>
+                    (v. 
+                  1.0.1
+                  )
+                </span>
+              </div>
+              <div>
+                0
+                 
+                <span>
+                  downloads
+                </span>
+              </div>
+            </div>
+            <div>
+              Does stuff
+            </div>
+          </div>,
+        ],
+        "className": undefined,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <FaRegGem
+              className=" "
+            />,
+            "className": ", saveIconContainer",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "className": " ",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div>
+                <div>
+                  <span>
+                    Railties
+                  </span>
+                  <span>
+                      (v. 
+                    1.0.1
+                    )
+                  </span>
+                </div>
+                <div>
+                  0
+                   
+                  <span>
+                    downloads
+                  </span>
+                </div>
+              </div>,
+              <div>
+                Does stuff
+              </div>,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div>
+                    <span>
+                      Railties
+                    </span>
+                    <span>
+                        (v. 
+                      1.0.1
+                      )
+                    </span>
+                  </div>,
+                  <div>
+                    0
+                     
+                    <span>
+                      downloads
+                    </span>
+                  </div>,
+                ],
+                "className": undefined,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <span>
+                        Railties
+                      </span>,
+                      <span>
+                          (v. 
+                        1.0.1
+                        )
+                      </span>,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Railties",
+                        "className": undefined,
+                      },
+                      "ref": null,
+                      "rendered": "Railties",
+                      "type": "span",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "  (v. ",
+                          "1.0.1",
+                          ")",
+                        ],
+                        "className": undefined,
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "  (v. ",
+                        "1.0.1",
+                        ")",
+                      ],
+                      "type": "span",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "0",
+                      " ",
+                      <span>
+                        downloads
+                      </span>,
+                    ],
+                    "className": undefined,
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "0",
+                    " ",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "downloads",
+                        "className": undefined,
+                      },
+                      "ref": null,
+                      "rendered": "downloads",
+                      "type": "span",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Does stuff",
+                "className": undefined,
+              },
+              "ref": null,
+              "rendered": "Does stuff",
+              "type": "div",
+            },
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

@@ -1,0 +1,16 @@
+.pageTitleContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  margin-top: 18px;
+}
+
+.searchContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.resultsContainer {
+  margin: 30px 30px 40px 30px;
+}

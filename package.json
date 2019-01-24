@@ -7,7 +7,8 @@
     "build": "./node_modules/.bin/parcel build ./index.html",
     "dev": "concurrently './node_modules/.bin/parcel ./index.html' 'node ./server'",
     "start": "NODE_ENV=production node ./server",
-    "test": "echo 'Your test command goes here'"
+    "test": "jest --coverage",
+    "test:update": "jest --coverage --updateSnapshot"
   },
   "repository": {
     "type": "git",
@@ -19,9 +20,49 @@
     "url": "https://github.com/UseFedora/frontend-takehome-parcel/issues"
   },
   "homepage": "https://github.com/UseFedora/frontend-takehome-parcel#readme",
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/setupTests.js",
+    "moduleNameMapper": {
+      ".+\\.(css|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
+    }
+  },
   "dependencies": {
+    "common": "^0.2.5",
+    "components": "^0.1.0",
     "concurrently": "^4.0.1",
     "express": "^4.16.3",
-    "parcel": "^1.9.7"
+    "hoist-non-react-statics": "^3.2.1",
+    "localStorage": "^1.0.4",
+    "parcel": "^1.9.7",
+    "prop-types": "^15.6.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-icons": "^3.3.0",
+    "react-redux": "^6.0.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-spinners": "^0.5.1",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "request": "^2.88.0",
+    "utils": "^0.3.1",
+    "validator": "^10.11.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "jest": "^23.6.0",
+    "jest-transform-stub": "^1.0.0",
+    "postcss-modules": "^1.4.1"
+  },
+  "resolutions": {
+    "babel-core": "^7.0.0-bridge"
   }
 }

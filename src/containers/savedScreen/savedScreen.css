@@ -1,0 +1,19 @@
+.pageTitleContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  margin-top: 18px;
+}
+
+.resultsContainer {
+  margin: 30px 30px 40px 30px;
+}
+
+.link {
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: #9b111e;
+  text-underline-position: under;
+  margin: 0;
+  padding: 0;
+}

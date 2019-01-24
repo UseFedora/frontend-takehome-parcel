@@ -1,0 +1,24 @@
+.component {
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: #9b111e;
+  text-underline-position: under;
+  margin: 0;
+  padding: 0;
+}
+
+.component p {
+  margin: 0;
+}
+
+.icon {
+  position: relative;
+  right: 5px;
+  font-size: 18px;
+  color: #9b111e;
+}
+
+.label {
+  position: relative;
+  bottom: 4px;
+}

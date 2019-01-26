@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  margin: 0 10px 0 0;
+  padding: 6px 4px 6px 4px;
+  border: 2px solid #caebf2;
+}
+
+.component {
+  flex: 0 0 100%;
+  font-size: 24px;
+  color: black;
+  background: transparent;
+  border: none;
+}
+
+.component:focus {
+  outline: none;
+}
+
+.component::placeholder {
+  color: #97bbbf;
+}

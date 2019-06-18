@@ -1,0 +1,24 @@
+.search-bar-wrap {
+    text-align: center;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;    
+}
+
+.search-bar-wrap div:hover {
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+}
+
+.search-bar-wrap > * {
+    padding: 5px;
+    border: 1px solid #000;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

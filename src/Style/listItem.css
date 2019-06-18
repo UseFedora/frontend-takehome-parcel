@@ -1,0 +1,35 @@
+.list-item-wrap {
+    border: 1px solid #000;
+    padding: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0 5px 0;
+    font-size: 13px;
+    width: 100%;
+}
+
+.list-item-wrap .list-item-action, .list-item-name {
+    text-align: left;
+}
+
+.list-item-wrap .list-item-action:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.list-item-wrap > * {
+    margin: 0px 5px;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.list-item-name {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.list-item-downloads {
+    white-space: nowrap;
+}

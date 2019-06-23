@@ -8,8 +8,7 @@ class SearchForm extends Component {
     value: "",
     searchResults: [],
     savedGems: [],
-    hideFavoriteResults: true,
-    gemIsSaved: false
+    hideFavoriteResults: true
   };
 
   handleChange = event => {
@@ -34,16 +33,6 @@ class SearchForm extends Component {
       });
   };
 
-  saveOrUnsave = () => {
-    this.state.gemIsSaved === false
-      ? this.setState({
-          gemIsSaved: true
-        })
-      : this.setState({
-          gemIsSaved: false
-        });
-  };
-
   toggleViewFavorites = () => {
     if (this.state.hideFavoriteResults === true) {
       this.setState({
@@ -61,7 +50,7 @@ class SearchForm extends Component {
   };
 
   render() {
-    let { hideFavoriteResults, searchResults, gemIsSaved } = this.state;
+    let { hideFavoriteResults, searchResults } = this.state;
 
     const displayFavorites =
       hideFavoriteResults === true ? (
@@ -78,7 +67,6 @@ class SearchForm extends Component {
           key={gem.sha}
           gem={gem}
           fetchGemInfo={this.fetchGemInfo}
-          gemIsSaved={gemIsSaved}
           saveOrUnsave={this.saveOrUnsave}
         />
       );

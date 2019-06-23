@@ -25,25 +25,22 @@ class Search extends Component {
     }
   };
 
-  // onCloseFavorites = () => {
-  //   this.setState({
-  //     hideFavoriteResults: true
-  //   });
-  // };
-
   render() {
+    const displayFavorites =
+      this.state.hideFavoriteResults === true ? (
+        <button onClick={this.toggleViewFavorites}>Favorites</button>
+      ) : (
+        <div>
+          <button onClick={this.toggleViewFavorites}>Close Favorites</button>
+          <Favorites closeFavorites={this.onCloseFavorites} />
+        </div>
+      );
+
     return (
       <div>
         <SearchForm />
         <Result />
-        {this.state.hideFavoriteResults === true ? (
-          <button onClick={this.toggleViewFavorites}>Favorites</button>
-        ) : (
-          <div>
-            <button onClick={this.toggleViewFavorites}>Close Favorites</button>
-            <Favorites closeFavorites={this.onCloseFavorites} />
-          </div>
-        )}
+        {displayFavorites}
       </div>
     );
   }

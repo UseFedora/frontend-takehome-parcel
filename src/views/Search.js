@@ -13,15 +13,27 @@ class Search extends Component {
     console.log("saveOrUnsaveGems");
   }
 
+  onFavoritesClick = () => {
+    this.setState({
+      hideFavoriteResults: false
+    });
+  };
+
+  onCloseFavorites = () => {
+    this.setState({
+      hideFavoriteResults: true
+    });
+  };
+
   render() {
     return (
       <div>
         <SearchForm />
         <Result />
         {this.state.hideFavoriteResults === true ? (
-          <button>Favorites</button>
+          <button onClick={this.onFavoritesClick}>Favorites</button>
         ) : (
-          <Favorites />
+          <Favorites closeFavorites={this.onCloseFavorites} />
         )}
       </div>
     );

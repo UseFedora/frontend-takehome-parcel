@@ -1,12 +1,36 @@
 import React, { Component } from "react";
-import SearchForm from "../components/SearchForm";
 import Result from "../components/Result";
 import Favorites from "../components/Favorites";
+import axios from "axios";
 
-class Search extends Component {
+class SearchForm extends Component {
   state = {
+    value: "",
+    searchResults: [],
     savedGems: [],
     hideFavoriteResults: true
+  };
+
+  handleChange = event => {
+    this.setState({
+      value: event.target.value
+    });
+  };
+
+  handleSubmit = event => {
+    event.preventDefault();
+    axios
+      .get(`http://localhost:3000/api/v1/search.json?query=${this.state.value}`)
+      .then(response => {
+        this.setState({
+          searchResults: response.data
+        });
+        this.props.fetchSaveResults(searchResults);
+        return response;
+      })
+      .catch(error => {
+        return error;
+      });
   };
 
   saveOrUnsaveGems() {
@@ -38,7 +62,19 @@ class Search extends Component {
 
     return (
       <div>
-        <SearchForm />
+        <form onSubmit={this.handleSubmit}>
+          <input
+            type="text"
+            value={this.state.value}
+            onChange={this.handleChange}
+            placeholder="Search..."
+            id="search"
+            name="Searcg"
+          />
+          <button type="submit" value="Submit">
+            <i className="fa fa-search" />
+          </button>
+        </form>
         <Result />
         {displayFavorites}
       </div>
@@ -46,4 +82,4 @@ class Search extends Component {
   }
 }
 
-export default Search;
+export default SearchForm;

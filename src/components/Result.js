@@ -2,15 +2,20 @@ import React, { Component } from "react";
 
 class Result extends Component {
   render() {
-    let { gem, fetchGemInfo } = this.props;
+    let { gem, fetchGemInfo, saveOrUnsave, gemIsSaved } = this.props;
     const anchorLink = {
       cursor: "pointer",
       textDecoration: "underline"
     };
     return (
-      <p style={anchorLink} onClick={fetchGemInfo}>
-        {gem.name}
-      </p>
+      <div>
+        <p style={anchorLink} onClick={fetchGemInfo}>
+          {gem.name}
+        </p>
+        <button onClick={saveOrUnsave}>
+          {gemIsSaved === false ? "Save" : "Unsave"}
+        </button>
+      </div>
     );
   }
 }

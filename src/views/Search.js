@@ -49,10 +49,16 @@ class SearchForm extends Component {
     console.log("lit");
   };
 
-  saveOrUnsave = gem => {
-    this.setState(prevState => ({
-      savedGems: [...prevState.savedGems, gem]
-    }));
+  saveOrUnsave = (gem, currentSaveState) => {
+    if (currentSaveState === true) {
+      this.setState(prevState => ({
+        savedGems: [...prevState.savedGems, gem]
+      }));
+    } else {
+      this.setState(prevState => ({
+        savedGems: [...prevState.savedGems.filter(savedGem => savedGem !== gem)]
+      }));
+    }
   };
 
   render() {

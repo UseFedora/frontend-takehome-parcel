@@ -49,8 +49,13 @@ class SearchForm extends Component {
     }
   };
 
+  onFetchGemInfo = () => {
+    console.log("lit");
+  };
+
   render() {
     let { hideFavoriteResults, searchResults } = this.state;
+
     const displayFavorites =
       hideFavoriteResults === true ? (
         <button onClick={this.toggleViewFavorites}>Favorites</button>
@@ -61,7 +66,9 @@ class SearchForm extends Component {
         </div>
       );
     const results = searchResults.map(gem => {
-      return <Result key={gem.sha} gem={gem} />;
+      return (
+        <Result key={gem.sha} gem={gem} fetchGemInfo={this.onFetchGemInfo} />
+      );
     });
 
     return (
@@ -79,8 +86,8 @@ class SearchForm extends Component {
             <i className="fa fa-search" />
           </button>
         </form>
-        {results}
         {displayFavorites}
+        {results}
       </div>
     );
   }

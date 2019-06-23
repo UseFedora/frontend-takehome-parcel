@@ -13,17 +13,23 @@ class Search extends Component {
     console.log("saveOrUnsaveGems");
   }
 
-  onFavoritesClick = () => {
-    this.setState({
-      hideFavoriteResults: false
-    });
+  toggleViewFavorites = () => {
+    if (this.state.hideFavoriteResults === true) {
+      this.setState({
+        hideFavoriteResults: false
+      });
+    } else {
+      this.setState({
+        hideFavoriteResults: true
+      });
+    }
   };
 
-  onCloseFavorites = () => {
-    this.setState({
-      hideFavoriteResults: true
-    });
-  };
+  // onCloseFavorites = () => {
+  //   this.setState({
+  //     hideFavoriteResults: true
+  //   });
+  // };
 
   render() {
     return (
@@ -31,9 +37,12 @@ class Search extends Component {
         <SearchForm />
         <Result />
         {this.state.hideFavoriteResults === true ? (
-          <button onClick={this.onFavoritesClick}>Favorites</button>
+          <button onClick={this.toggleViewFavorites}>Favorites</button>
         ) : (
-          <Favorites closeFavorites={this.onCloseFavorites} />
+          <div>
+            <button onClick={this.toggleViewFavorites}>Close Favorites</button>
+            <Favorites closeFavorites={this.onCloseFavorites} />
+          </div>
         )}
       </div>
     );

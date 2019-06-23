@@ -5,14 +5,18 @@ class Result extends Component {
     gemIsSaved: false
   };
 
-  saveOrUnsave = () => {
-    this.state.gemIsSaved === false
-      ? this.setState({
-          gemIsSaved: true
-        })
-      : this.setState({
-          gemIsSaved: false
-        });
+  onSaveorUnsave = () => {
+    let { saveOrUnsave, gem } = this.props;
+    if (this.state.gemIsSaved === false) {
+      saveOrUnsave(gem);
+      this.setState({
+        gemIsSaved: true
+      });
+    } else {
+      this.setState({
+        gemIsSaved: false
+      });
+    }
   };
 
   render() {
@@ -27,7 +31,7 @@ class Result extends Component {
         <p style={anchorLink} onClick={fetchGemInfo}>
           {gem.name}
         </p>
-        <button onClick={this.saveOrUnsave}>
+        <button onClick={this.onSaveorUnsave}>
           {gemIsSaved === false ? "Save" : "Unsave"}
         </button>
       </div>

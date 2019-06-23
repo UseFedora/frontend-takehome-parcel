@@ -49,8 +49,14 @@ class SearchForm extends Component {
     console.log("lit");
   };
 
+  saveOrUnsave = gem => {
+    this.setState(prevState => ({
+      savedGems: [...prevState.savedGems, gem]
+    }));
+  };
+
   render() {
-    let { hideFavoriteResults, searchResults } = this.state;
+    let { hideFavoriteResults, searchResults, savedGems } = this.state;
 
     const displayFavorites =
       hideFavoriteResults === true ? (
@@ -67,6 +73,8 @@ class SearchForm extends Component {
           key={gem.sha}
           gem={gem}
           fetchGemInfo={this.fetchGemInfo}
+          saveOrUnsave={this.saveOrUnsave}
+          savedGems={savedGems}
           saveOrUnsave={this.saveOrUnsave}
         />
       );

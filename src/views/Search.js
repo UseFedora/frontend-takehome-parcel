@@ -50,8 +50,9 @@ class SearchForm extends Component {
   };
 
   render() {
+    let { hideFavoriteResults, searchResults } = this.state;
     const displayFavorites =
-      this.state.hideFavoriteResults === true ? (
+      hideFavoriteResults === true ? (
         <button onClick={this.toggleViewFavorites}>Favorites</button>
       ) : (
         <div>
@@ -59,6 +60,9 @@ class SearchForm extends Component {
           <Favorites closeFavorites={this.onCloseFavorites} />
         </div>
       );
+    const results = searchResults.map(gem => {
+      return <Result key={gem.sha} gem={gem} />;
+    });
 
     return (
       <div>
@@ -75,7 +79,7 @@ class SearchForm extends Component {
             <i className="fa fa-search" />
           </button>
         </form>
-        <Result />
+        {results}
         {displayFavorites}
       </div>
     );

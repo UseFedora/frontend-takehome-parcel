@@ -36,7 +36,7 @@ class Result extends Component {
 
   render() {
     let { gem } = this.props;
-    let { gemIsSaved, displayGemInfo } = this.state;
+    let { displayGemInfo } = this.state;
     const anchorLink = {
       cursor: "pointer",
       textDecoration: "underline"
@@ -48,7 +48,7 @@ class Result extends Component {
           <p style={anchorLink}>{gem.name}</p>
         </a>
         <button onClick={this.onSaveOrUnsave}>
-          {gemIsSaved === false ? "Save" : "Unsave"}
+          {localStorage[gem.name] === undefined ? "Save" : "Unsave"}
         </button>
         {displayGemInfo === true ? (
           <button onClick={this.fetchGemInfo}>Close Details</button>

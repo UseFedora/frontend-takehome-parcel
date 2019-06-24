@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Result from "../components/Result";
 import Favorites from "../components/Favorites";
+import SearchHeadings from "../components/SearchHeadings";
 import axios from "axios";
 
 class SearchForm extends Component {
@@ -66,10 +67,10 @@ class SearchForm extends Component {
 
     const displayFavorites =
       hideFavoriteResults === true ? (
-        <button onClick={this.toggleViewFavorites}>Favorites</button>
+        <button onClick={this.toggleViewFavorites}>Saved Gems</button>
       ) : (
         <div>
-          <button onClick={this.toggleViewFavorites}>Close Favorites</button>
+          <button onClick={this.toggleViewFavorites}>Close</button>
           <Favorites
             closeFavorites={this.onCloseFavorites}
             savedGems={savedGems}
@@ -91,6 +92,7 @@ class SearchForm extends Component {
 
     return (
       <div>
+        <SearchHeadings />
         <form onSubmit={this.handleSubmit}>
           <input
             type="text"

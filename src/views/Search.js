@@ -56,7 +56,7 @@ class SearchForm extends Component {
 
   saveOrUnsave = (gem, currentSaveState) => {
     if (currentSaveState === true) {
-      localStorage.setItem(gem.name, gem.name);
+      localStorage.setItem(gem.name, JSON.stringify(gem));
       this.setState(prevState => ({
         savedGems: [...prevState.savedGems, gem]
       }));
@@ -65,6 +65,23 @@ class SearchForm extends Component {
       this.setState(prevState => ({
         savedGems: [...prevState.savedGems.filter(savedGem => savedGem !== gem)]
       }));
+    }
+  };
+
+  componentDidMount = () => {
+    for (let prop in localStorage) {
+      if (
+        prop !== "length" &&
+        prop !== "getItem" &&
+        prop !== "setItem" &&
+        prop !== "removeItem" &&
+        prop !== "clear" &&
+        prop !== "key"
+      ) {
+        this.setState(prevState => ({
+          savedGems: [...prevState.savedGems, JSON.parse(localStorage[prop])]
+        }));
+      }
     }
   };
 

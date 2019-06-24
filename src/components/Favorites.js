@@ -3,7 +3,7 @@ import React from "react";
 const Favorites = ({ savedGems }) => {
   return (
     <div>
-      {savedGems.length > 0 ? <h3>Saved Gems</h3> : <h3>No Saved Gems</h3>}
+      <h2>{savedGems.length > 0 ? "Saved Gems" : "No Saved Gems"}</h2>
       {savedGems.map((savedGem, index) => {
         return (
           <a

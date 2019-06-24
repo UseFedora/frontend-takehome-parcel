@@ -138,7 +138,7 @@ class SearchForm extends Component {
           </button>
         </form>
         {displayFavorites}
-        {results.length > 0 ? <h3>Results</h3> : null}
+        {results.length > 0 ? <h2>Results</h2> : null}
         {notInSearchQuery === false ? (
           results
         ) : (

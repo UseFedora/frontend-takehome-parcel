@@ -1,13 +1,41 @@
+html {
+  font-size: 16px;
+}
+
 body {
   background: #eee;
   font-family: Georgia;
   margin: 0;
   padding: 50px;
+  color: #1b1b1b;
 }
 
-.big-lorem-ipsum {
-  font-size: 50px;
-  font-weight: 300;
+#app {
+  max-width: 75%;
   margin: 0 auto;
-  max-width: 15em;
+}
+
+input,
+button {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  border: 0.1px solid #ddd;
+  color: #1b1b1b;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+.flex {
+  display: flex;
+}
+
+/* .space-between {
+  justify-content: space-between;
+} */
+
+.row {
+  margin-bottom: 1rem;
 }

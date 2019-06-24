@@ -93,14 +93,21 @@ class SearchForm extends Component {
       notInSearchQuery
     } = this.state;
 
+    const marginLeft = {
+      marginLeft: "0.25rem"
+    };
+
     const displayFavorites =
       hideFavoriteResults === true ? (
         <button onClick={this.toggleViewFavorites}>
-          Saved Gems <i className="fa fa-star fa-1x" />
+          Saved Gems <i style={marginLeft} className="fa fa-star fa-1x" />
         </button>
       ) : (
         <div>
-          <button onClick={this.toggleViewFavorites}>Close</button>
+          <button onClick={this.toggleViewFavorites}>
+            Close Saved Gems{" "}
+            <i style={marginLeft} className="fa fa-star fa-1x" />
+          </button>
           <Favorites
             closeFavorites={this.onCloseFavorites}
             savedGems={savedGems}

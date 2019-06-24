@@ -1,0 +1,45 @@
+html {
+  font-size: 16px;
+  body {
+    background: #fcebe8;
+    font-family: Georgia;
+    margin: 0;
+    padding: 50px;
+    color: #1b1b1b;
+    #app {
+      max-width: 500px;
+      margin: 0 auto;
+      h2 {
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
+      input,
+      button {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        background-color: #fff;
+        border: 0.1px solid #ddd;
+        color: #1b1b1b;
+        font-weight: 500;
+      }
+      .flex {
+        display: flex;
+      }
+      .align-center {
+        align-items: center;
+      }
+      .fa-star {
+        color: #e9573f;
+      }
+      hr {
+        border: 1px solid #e9573f3b;
+      }
+      .margin-left {
+        margin-left: 0.25rem;
+      }
+    }
+  }
+}

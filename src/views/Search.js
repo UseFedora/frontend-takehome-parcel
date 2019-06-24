@@ -52,10 +52,12 @@ class SearchForm extends Component {
 
   saveOrUnsave = (gem, currentSaveState) => {
     if (currentSaveState === true) {
+      localStorage.setItem(gem.name, gem.name);
       this.setState(prevState => ({
         savedGems: [...prevState.savedGems, gem]
       }));
     } else {
+      localStorage.removeItem(gem.name);
       this.setState(prevState => ({
         savedGems: [...prevState.savedGems.filter(savedGem => savedGem !== gem)]
       }));
@@ -90,10 +92,14 @@ class SearchForm extends Component {
       );
     });
 
+    const formStyle = {
+      marginBottom: "15px"
+    };
+
     return (
       <div>
         <SearchHeadings />
-        <form onSubmit={this.handleSubmit}>
+        <form style={formStyle} onSubmit={this.handleSubmit}>
           <input
             type="text"
             value={this.state.value}

@@ -9,7 +9,8 @@ class SearchForm extends Component {
     value: "",
     searchResults: [],
     savedGems: [],
-    hideFavoriteResults: true
+    hideFavoriteResults: true,
+    notInSearchQuery: false
   };
 
   handleChange = event => {
@@ -23,10 +24,17 @@ class SearchForm extends Component {
     axios
       .get(`http://localhost:3000/api/v1/search.json?query=${this.state.value}`)
       .then(response => {
-        this.setState({
-          searchResults: response.data
-        });
-        this.props.fetchSaveResults(searchResults);
+        if (response.data.length === 0) {
+          this.setState({
+            notInSearchQuery: true
+          });
+        } else {
+          this.setState({
+            searchResults: response.data,
+            notInSearchQuery: false
+          });
+          this.props.fetchSaveResults(searchResults);
+        }
         return response;
       })
       .catch(error => {
@@ -61,7 +69,12 @@ class SearchForm extends Component {
   };
 
   render() {
-    let { hideFavoriteResults, searchResults, savedGems } = this.state;
+    let {
+      hideFavoriteResults,
+      searchResults,
+      savedGems,
+      notInSearchQuery
+    } = this.state;
 
     const displayFavorites =
       hideFavoriteResults === true ? (
@@ -109,7 +122,11 @@ class SearchForm extends Component {
         </form>
         {displayFavorites}
         {results.length > 0 ? <h3>Results</h3> : null}
-        {results}
+        {notInSearchQuery === false ? (
+          results
+        ) : (
+          <p>Gem not found, please search again</p>
+        )}
       </div>
     );
   }

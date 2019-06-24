@@ -94,10 +94,6 @@ class SearchForm extends Component {
       notInSearchQuery
     } = this.state;
 
-    const topMargin = {
-      marginTop: "1.5rem"
-    };
-
     const displayFavorites =
       hideFavoriteResults === true ? (
         <button onClick={this.toggleViewFavorites}>
@@ -128,7 +124,7 @@ class SearchForm extends Component {
     });
 
     const formStyle = {
-      marginBottom: "15px"
+      margin: "1.5rem auto"
     };
     const submitButtonStyle = {
       borderLeft: 0
@@ -137,13 +133,16 @@ class SearchForm extends Component {
       width: "50px",
       height: "50px"
     };
+    const topMargin = {
+      marginTop: "1.5rem"
+    };
     return (
       <div>
         <div className="flex align-center">
           <img style={logoStyle} src={logo} alt="Logo" />
           <SearchHeadings />
         </div>
-        <p>- Save/unsave by selecting the star icon</p>
+        <p> Save/unsave by selecting the star icon</p>
         <p>- View saved gems</p>
         <p>- Select gem to view its Github documentation</p>
         <form style={formStyle} onSubmit={this.handleSubmit}>

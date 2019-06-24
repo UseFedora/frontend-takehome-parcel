@@ -42,28 +42,11 @@ class Result extends Component {
       textDecoration: "underline"
     };
 
-    // const displayText = () => {
-    //   if (displayGemInfo === false) {
-    //     return <p>{gem.name}</p>;
-    //   } else {
-    //     for (let prop in gem) {
-    //       if (prop !== "name") {
-    //         return (
-    //           <p>
-    //             {prop}: {gem[prop]}
-    //           </p>
-    //         );
-    //       }
-    //     }
-    //   }
-    // };
-
     return (
       <div>
-        <p style={anchorLink} onClick={this.fetchGemInfo}>
-          {gem.name}
-        </p>
-        <p>{displayGemInfo === true ? "Gem Details" : null}</p>
+        <a href={gem.homepage_uri} target="_blank">
+          <p>{gem.name}</p>
+        </a>
         <button onClick={this.onSaveOrUnsave}>
           {gemIsSaved === false ? "Save" : "Unsave"}
         </button>

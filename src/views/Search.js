@@ -96,6 +96,9 @@ class SearchForm extends Component {
     const marginLeft = {
       marginLeft: "0.25rem"
     };
+    const topMargin = {
+      marginTop: "1.5rem"
+    };
 
     const displayFavorites =
       hideFavoriteResults === true ? (
@@ -108,6 +111,7 @@ class SearchForm extends Component {
             Close Saved Gems{" "}
             <i style={marginLeft} className="fa fa-star fa-1x" />
           </button>
+          <hr style={topMargin} />
           <Favorites
             closeFavorites={this.onCloseFavorites}
             savedGems={savedGems}
@@ -136,6 +140,9 @@ class SearchForm extends Component {
     return (
       <div>
         <SearchHeadings />
+        <p>- Save/unsave by selecting the star icon</p>
+        <p>- View saved gems</p>
+        <p>- Select gem to view its Github documentation</p>
         <form style={formStyle} onSubmit={this.handleSubmit}>
           <input
             type="text"
@@ -143,14 +150,18 @@ class SearchForm extends Component {
             onChange={this.handleChange}
             placeholder="Search..."
             id="search"
-            name="Searcg"
+            name="Search"
           />
           <button style={submitButtonStyle} type="submit" value="Submit">
             <i className="fa fa-search" />
           </button>
         </form>
         {displayFavorites}
-        {results.length > 0 ? <h2>Results</h2> : null}
+        {results.length > 0 ? (
+          <div>
+            <h2>Results</h2>
+          </div>
+        ) : null}
         {notInSearchQuery === false ? (
           results
         ) : (

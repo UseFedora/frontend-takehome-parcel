@@ -10,12 +10,16 @@ body {
   color: #1b1b1b;
 }
 
+h2 {
+  margin-bottom: 0.5rem;
+}
+
 p {
   font-size: 1.1rem;
 }
 
 #app {
-  max-width: 75%;
+  max-width: 500px;
   margin: 0 auto;
 }
 
@@ -42,4 +46,10 @@ button {
 
 .fa-star {
   color: #e9573f;
+}
+
+hr {
+  // max-width: 450px;
+  // margin: 0 auto;
+  border: 1px solid #e9573f3b;
 }

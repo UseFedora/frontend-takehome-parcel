@@ -15,6 +15,7 @@ const Favorites = ({ savedGems }) => {
           </a>
         );
       })}
+      <hr />
     </div>
   );
 };

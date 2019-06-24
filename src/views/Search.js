@@ -46,10 +46,6 @@ class SearchForm extends Component {
     }
   };
 
-  fetchGemInfo = () => {
-    console.log("lit");
-  };
-
   saveOrUnsave = (gem, currentSaveState) => {
     if (currentSaveState === true) {
       localStorage.setItem(gem.name, gem.name);
@@ -84,7 +80,6 @@ class SearchForm extends Component {
         <Result
           key={gem.sha}
           gem={gem}
-          fetchGemInfo={this.fetchGemInfo}
           saveOrUnsave={this.saveOrUnsave}
           savedGems={savedGems}
           saveOrUnsave={this.saveOrUnsave}

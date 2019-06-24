@@ -70,7 +70,10 @@ class SearchForm extends Component {
       ) : (
         <div>
           <button onClick={this.toggleViewFavorites}>Close Favorites</button>
-          <Favorites closeFavorites={this.onCloseFavorites} />
+          <Favorites
+            closeFavorites={this.onCloseFavorites}
+            savedGems={savedGems}
+          />
         </div>
       );
     const results = searchResults.map(gem => {
@@ -102,6 +105,7 @@ class SearchForm extends Component {
           </button>
         </form>
         {displayFavorites}
+        {results.length > 0 ? <h3>Results</h3> : null}
         {results}
       </div>
     );

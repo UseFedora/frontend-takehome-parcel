@@ -41,17 +41,27 @@ class Result extends Component {
       cursor: "pointer",
       textDecoration: "underline"
     };
+    const buttonStyle = {
+      padding: "0.5rem 0.5rem",
+      fontSize: "0.8rem"
+    };
 
     return (
-      <div>
+      <div className="flex align-center">
         <a href={gem.homepage_uri || gem.source_code_uri} target="_blank">
           <p style={anchorLink}>{gem.name}</p>
         </a>
-        <button onClick={this.onSaveOrUnsave}>
-          {localStorage[gem.name] === undefined ? "Save" : "Unsave"}
-        </button>
+        <div style={buttonStyle} onClick={this.onSaveOrUnsave}>
+          {localStorage[gem.name] === undefined ? (
+            <i className="far fa-star fa-lg" />
+          ) : (
+            <i className="fa fa-star fa-lg" />
+          )}
+        </div>
         {displayGemInfo === true ? (
-          <button onClick={this.fetchGemInfo}>Close Details</button>
+          <button style={buttonStyle} onClick={this.fetchGemInfo}>
+            Close Details
+          </button>
         ) : null}
       </div>
     );

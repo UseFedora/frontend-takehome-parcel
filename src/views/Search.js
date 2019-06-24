@@ -95,7 +95,9 @@ class SearchForm extends Component {
 
     const displayFavorites =
       hideFavoriteResults === true ? (
-        <button onClick={this.toggleViewFavorites}>Saved Gems</button>
+        <button onClick={this.toggleViewFavorites}>
+          Saved Gems <i className="fa fa-star fa-1x" />
+        </button>
       ) : (
         <div>
           <button onClick={this.toggleViewFavorites}>Close</button>
@@ -120,6 +122,9 @@ class SearchForm extends Component {
     const formStyle = {
       marginBottom: "15px"
     };
+    const submitButtonStyle = {
+      borderLeft: 0
+    };
 
     return (
       <div>
@@ -133,7 +138,7 @@ class SearchForm extends Component {
             id="search"
             name="Searcg"
           />
-          <button type="submit" value="Submit">
+          <button style={submitButtonStyle} type="submit" value="Submit">
             <i className="fa fa-search" />
           </button>
         </form>

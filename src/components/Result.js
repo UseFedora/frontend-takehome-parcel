@@ -44,8 +44,8 @@ class Result extends Component {
 
     return (
       <div>
-        <a href={gem.homepage_uri} target="_blank">
-          <p>{gem.name}</p>
+        <a href={gem.homepage_uri || gem.source_code_uri} target="_blank">
+          <p style={anchorLink}>{gem.name}</p>
         </a>
         <button onClick={this.onSaveOrUnsave}>
           {gemIsSaved === false ? "Save" : "Unsave"}

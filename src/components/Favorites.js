@@ -6,7 +6,11 @@ const Favorites = ({ savedGems }) => {
       {savedGems.length > 0 ? <h3>Saved Gems</h3> : <h3>No Saved Gems</h3>}
       {savedGems.map(savedGem => {
         return (
-          <a key={savedGem.sha} href={savedGem.homepage_uri} target="_blank">
+          <a
+            key={savedGem.sha}
+            href={savedGem.homepage_uri || savedGem.source_code_uri}
+            target="_blank"
+          >
             <p>{savedGem.name}</p>
           </a>
         );

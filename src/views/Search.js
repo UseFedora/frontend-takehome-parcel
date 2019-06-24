@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Result from "../components/Result";
 import Favorites from "../components/Favorites";
 import SearchHeadings from "../components/SearchHeadings";
+import logo from "../assets/images/rubyGemsLogo.png";
 import axios from "axios";
 
 class SearchForm extends Component {
@@ -93,9 +94,6 @@ class SearchForm extends Component {
       notInSearchQuery
     } = this.state;
 
-    const marginLeft = {
-      marginLeft: "0.25rem"
-    };
     const topMargin = {
       marginTop: "1.5rem"
     };
@@ -103,13 +101,12 @@ class SearchForm extends Component {
     const displayFavorites =
       hideFavoriteResults === true ? (
         <button onClick={this.toggleViewFavorites}>
-          Saved Gems <i style={marginLeft} className="fa fa-star fa-1x" />
+          Saved Gems <i className="fa fa-star fa-1x margin-left" />
         </button>
       ) : (
         <div>
           <button onClick={this.toggleViewFavorites}>
-            Close Saved Gems{" "}
-            <i style={marginLeft} className="fa fa-star fa-1x" />
+            Close Saved Gems <i className="fa fa-star fa-1x margin-left" />
           </button>
           <hr style={topMargin} />
           <Favorites
@@ -136,10 +133,16 @@ class SearchForm extends Component {
     const submitButtonStyle = {
       borderLeft: 0
     };
-
+    const logoStyle = {
+      width: "50px",
+      height: "50px"
+    };
     return (
       <div>
-        <SearchHeadings />
+        <div className="flex align-center">
+          <img style={logoStyle} src={logo} alt="Logo" />
+          <SearchHeadings />
+        </div>
         <p>- Save/unsave by selecting the star icon</p>
         <p>- View saved gems</p>
         <p>- Select gem to view its Github documentation</p>

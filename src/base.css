@@ -1,13 +1,117 @@
+/* 
+  Minimal design using an Adobe Color theme:
+  https://color.adobe.com/My-Color-Theme-color-theme-15626579 
+*/
+
 body {
-  background: #eee;
+  background: #fff;
   font-family: Georgia;
-  margin: 0;
-  padding: 50px;
+  text-align: center;
 }
 
-.big-lorem-ipsum {
-  font-size: 50px;
-  font-weight: 300;
-  margin: 0 auto;
-  max-width: 15em;
+h1 {
+  color:#1D8FF2;
+}
+
+#search {
+  width: 25%;
+  margin: auto;
+}
+
+#search input {
+  background: url('./../images/ruby.svg') no-repeat;
+  background-size: 25px;
+  background-position: 2px 5px;
+  width: -webkit-fill-available;
+  padding: 10px 10px 10px 35px;
+}
+
+#results {
+  padding: 0;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#results li {
+  position: relative;
+  padding: 10px;
+  background-color: #52B5F2;
+  list-style-type: none;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px 2px;
+}
+
+#results li:nth-of-type(even) {
+  background-color: #1D8FF2;
+}
+
+#results li:hover {
+  background-color: #fff; 
+}
+
+#results li:hover span {
+  color: #1D8FF2;
+}
+
+#results li div {
+  display: inline-block;
+}
+
+#results li span {
+  color: #fff;
+}
+
+#results li div.save,
+#saveList li div.save {
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+  top: 10px;
+  -webkit-mask: url('./../images/heart.svg') no-repeat 50% 50%;
+  mask: url('./../images/heart.svg') no-repeat 50% 50%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-size: 17px 15px;
+  width: 17px;
+  height: 15px;
+  margin: 0 10px;
+  background-color: #9CD3F4;
+}
+
+#results li div.save.active,
+#saveList li div.save.active {
+  background-color: #8404BF;
+}
+
+#results li div.save:hover {
+  background-color: #998AFF;
+}
+
+#saveList li div.save:hover {
+  background-color: #9CD3F4;
+}
+
+#saved {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  padding: 20px;
+  width: 300px;
+  background-color: #998AFF;
+  border-radius: 5px 0 0 5px;
+}
+
+#saveList {
+  margin: 0;
+  padding: 0;
+}
+
+#saveList li {
+  position: relative;
+  padding: 5px;
+  list-style-type: none;
+  text-align: center;
+  border-bottom: 1px solid black;
 }
